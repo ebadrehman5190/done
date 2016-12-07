@@ -67,7 +67,7 @@ include('session1.php');
 				
 		echo '<table border="2">';
 			echo '<tr>';
-				echo '<th style="width:125px;">Date</th>';
+				echo '<th>Date</th>';
 				echo '<th>Members</th>';
 				echo '<th>Items</th>';
 				echo '<th>Paid</th>';
@@ -80,7 +80,7 @@ include('session1.php');
 			echo '</tr>';
 				while($row = mysqli_fetch_array($result)){
 			echo '<tr>';
-				echo '<td style="width:125px;">' . $row['date'] . '</td>';
+				echo '<td>' . $row['date'] . '</td>';
 				if (strpos($row['members'], $_SESSION['login_user']) !== false) {
 						echo '<td>' . $row['members'] . '</td>';
 						echo '<td>' . $row['items'] . '</td>';
@@ -142,13 +142,10 @@ include('session1.php');
 							foreach($explode_member as $key => $value){
 								if($value === $_SESSION['login_user']){
 	//								$sum_today = $explode_amount[$key] + $row['per_head'];
-										echo '<td>' . $explode_amount[$key] . '</td>';
-										
+										echo '<td>' . $explode_amount[$key] . '</td>';			
 									}
 							}
 						}else{
-
-
 				echo '<td></td>';
 					}
 					}
@@ -163,7 +160,7 @@ include('session1.php');
 				
 		echo '<table border="2">';
 			echo '<tr>';
-				echo '<th style="width:125px;">Date</th>';
+				echo '<th>Date</th>';
 				echo '<th>Members</th>';
 				echo '<th>Items</th>';
 				echo '<th>Paid</th>';
@@ -176,7 +173,7 @@ include('session1.php');
 			echo '</tr>';
 				while($row = mysqli_fetch_array($result)){
 			echo '<tr>';
-				echo '<td style="width:125px;">' . $row['date'] . '</td>';
+				echo '<td>' . $row['date'] . '</td>';
 				if (strpos($row['members'], $_SESSION['login_user']) !== false) {
 						echo '<td>' . $row['members'] . '</td>';
 						echo '<td>' . $row['items'] . '</td>';
@@ -229,7 +226,6 @@ if($value === $_SESSION['login_user']){
 */
 
 				if (strpos($row['members'], $_SESSION['login_user']) !== false) {
-
 					if (strpos($row['other_member'], $_SESSION['login_user']) !== false) {
 						$explode_amount = explode(',',$row['other_amount']);
 						$explode_member = explode(',',$row['other_member']);
@@ -238,7 +234,6 @@ if($value === $_SESSION['login_user']){
 							if($value === $_SESSION['login_user']){
 								$sum_today = $explode_amount[$key] + $row['per_head'];
 									echo '<td>' . $sum_today . '</td>';
-									
 								}
 						}					
 					}else{
@@ -258,8 +253,6 @@ if($value === $_SESSION['login_user']){
 									}
 							}
 						}else{
-
-
 				echo '<td></td>';
 					}
 					}

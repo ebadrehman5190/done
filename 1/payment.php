@@ -73,7 +73,7 @@
 <!-- Fetch total amount of selected member -->
                         <td>Amount:</td>
                         <td style="text-align:center; width:50px;"><b>
-                            <span><?php echo $balance1['costumer_balance']; ?></span></b><td>
+                            <span><?php echo $deducted_amount ; ?></span></b><td>
                         <td style="width:50px;"></td>     
 <!-- button of fetch amount -->
                         <td><input type="submit" name="fetch_amount" value="amount" onclick="return revalidate()"></td>
