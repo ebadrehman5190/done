@@ -5,11 +5,11 @@ include('session1.php');
 <!doctype html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
 	<title>member data</title>
 	<link rel="stylesheet" href="history.css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 	
 </head>
 <body>
@@ -49,11 +49,11 @@ include('session1.php');
 <br>  
 
 	<form action="" method="POST">
-	Search By Date:<input type="date" name="date_from" id="date_from" style="width:125px;">
-				to <input type="date" name="date_to" id="date_to" style="width:125px;">
+	Search By Date:<input type="date" name="date_from" id="date_from" style="width:125px;" value="<?php echo $_POST['date_from']; ?>">
+				to <input type="date" name="date_to" id="date_to" style="width:125px;" value="<?php echo $_POST['date_to']; ?>">
 				   <input name="search" type="submit" id="search" value="search">
 	</form>			
-
+<br>
 		<?php				
 			if($_POST['search']){
 

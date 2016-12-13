@@ -48,7 +48,7 @@ include('session1.php');
 	</div>
 <br>  
 
-<h3 style= "margin:auto ; width:30%;">Data Of Paid By <?php echo $_SESSION['login_user'] ; ?></h3>
+<h3 style= "margin:auto ; width:30%;">Record Of Amount Paid By <?php echo $_SESSION['login_user'] ; ?></h3>
 <br>
 	<form action='#' method="post">
 		

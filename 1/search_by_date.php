@@ -60,12 +60,12 @@ $data['date']=$data['members']=$data['items']=$data['paid']=$data['amount']=$dat
 <table class="data">
     <tr>
         <td>Date:</td>
-        <td><input type="date" name="date" id="date"></td>
+        <td><input type="date" name="date" id="date" value="<?php echo $_POST['date']; ?>"></td>
         <td><span id="var_date" style="color:red;"></span></td>
     </tr>    
     <tr>
         <td>Member:</td>
-        <td><select name="member" id="mSelect">
+        <td><select name="member" id="mSelect" value="<?php echo $_POST['member']; ?>">
                 <option></option>
     <?php
                 include('conn.php');

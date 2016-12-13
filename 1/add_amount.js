@@ -10,7 +10,7 @@
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
             var timestamp = randString(x);
-            $(wrapper).append( $('<div class="'+timestamp+'" style="display:inline;" />').load(loadPHP)).append('<div class="'+timestamp+'" style="display:inline;"><input type="text" placeholder="amount" name="other_amount[]" style="width:60px;"/><input type="text" placeholder="Items" name="other_item[]" style="width:60px;"/><a href="#" class="remove" myattr="'+timestamp+'">Remove</a><br></div>') ; //add input box
+            $(wrapper).append( $('<div class="'+timestamp+'" style="display:inline;" />').load(loadPHP)).append('<div class="'+timestamp+'" style="display:inline;"><input type="text" placeholder="amount" name="other_amount[]" id="other_amount" style="width:60px;"/><input type="text" placeholder="Items" name="other_item[]" id="other_item" style="width:60px;"/><a href="#" class="remove" myattr="'+timestamp+'">Remove</a><br></div>') ; //add input box
 //            $(wrapper).append('<div>');
   //          $(wrapper).load('select.php');
     //        $(wrapper).append('<input type="text" placeholder="amount" name="other_amount[]" style="width:60px;"/><a href="#" class="remove">Remove</a></div>');

@@ -12,7 +12,7 @@
 			$edit = "SELECT costumer_user FROM costumer "; 
 			$result = mysqli_query($conn,$edit); 
 
-		echo '<select name="other_members[]" id="paid">';
+		echo '<select name="other_members[]" id="other_member">';
 		echo '<option></option>';
 			while($row = mysqli_fetch_array($result)) {
 				echo '<option>' . $row["costumer_user"] . '</option>';  

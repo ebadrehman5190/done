@@ -62,7 +62,7 @@
         <tr>    
             <th>Date:</th>
             <td><div class="align">
-                <input type="date" name="date" id="date" style="width:169px;">
+                <input type="date" name="date" id="date" style="width:169px;" value="<?php echo $_POST['date']; ?>">
                 </div>
             </td>
             <td><span id="var_date" style="color:red;"><?php echo $dateErr;?></span></td>
@@ -70,7 +70,7 @@
         <tr>    
             <th>Members:</th>
             <td><div class="align">
-                        <select multiple="multiple" name="member[]" id="mSelect" size="2" style="width:173px;">
+                        <select multiple="multiple" name="member[]" id="mSelect" size="2" style="width:173px;" value="<?php echo $POST['member']; ?>">
                                 <?php
                                     $edit = "SELECT costumer_user FROM costumer ";				
                                     $result = mysqli_query($conn,$edit);
@@ -91,7 +91,7 @@
                     <div class="input_fields_wrap">   
                         <div>
                             <div>
-                                <input type="text" name="mytext[]" id="mytext">
+                                <input type="text" name="mytext[]" id="mytext" value="<?php echo $_POST['mytext']; ?>">
                                 <button class="add_field_button">Add More</button>
                             </div>  
                         </div> 
@@ -103,7 +103,7 @@
         <tr>
             <th>Paid money:</th>
             <td><div class="align">
-                <select name="paid" id="paid" style="width:173px;">
+                <select name="paid" id="paid" style="width:173px;" value="<?php echo $_POST['paid']; ?>">
                     <option></option>
                     <?php
                             $edit = "SELECT costumer_user FROM costumer ";				
@@ -120,7 +120,7 @@
         <tr>
             <th>Total amount:</th>
             <td><div class="align">
-                <input type="number" name="amount" id="amount" class="countOne" onkeyup="myFunction(this.value)">
+                <input type="number" name="amount" id="amount" class="countOne" onkeyup="myFunction(this.value)" value="<?php echo $_POST['amount']; ?>">
                 </div>
             </td>
             <td><span id="var_amount" style="color:red;"><?php echo $amountErr;?></span></td>
@@ -128,13 +128,14 @@
         <tr>
             <th>Per head:</th> 
             <td><div class="align">
-                    <input type="text" name="per_head" id="resultHere" readonly>
+                    <input type="text" name="per_head" id="resultHere" value="<?php echo $_POST['per_head']; ?>" readonly >
                 </div>
             </td>
         </tr>
         <tr>
             <th>Amount of other members:</th>
-            <td><div name="other_members[]" style="width:95px;display:inline;"><?php include('select.php'); ?></div><input type="text" placeholder="amount" name="other_amount[]" style="width:60px;"/><input type="text" placeholder="Items" name="other_item[]" style="width:60px;"/><input type="button" class="add_amount" id="showphpfile" value="Other costumers"></td>
+            <td><div name="other_members[]" style="width:95px;display:inline;"><?php include('select.php'); ?></div><input type="text" placeholder="amount" name="other_amount[]" id="other_amount" style="width:60px;"/><input type="text" placeholder="Items" name="other_item[]" id="other_item" style="width:60px;"/><input type="button" class="add_amount" id="showphpfile" value="Other costumers"></td>
+            <td><span id="other" style="color:red;"></span></td>
         </tr>    
         <tr>
             <td></td>
@@ -144,7 +145,8 @@
                         </div>
                     </div>
                 </div>
-            </td>                                
+            </td>
+            <td><span id="other" style="color:red;"></span></td>                                
         </tr>
         <tr>
             <td></td>

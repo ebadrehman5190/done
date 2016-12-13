@@ -17,33 +17,33 @@ $user=$name=$email=$password=$cpassword=$gender="";
 		<table>
 			<tr>
                 <td>Username:</td>
-                <td><input type="text" name="user" id="user"></td>
+                <td><input type="text" name="user" id="user" value="<?php echo $_POST['user']; ?>"></td>
 				<td><span id="var_user" style="color:red;"><?php echo $userErr;?></span></td>
             </tr>
             <tr>
                 <td>FullName:</td>
-                <td><input type="text" name="name" id="name"></td>
+                <td><input type="text" name="name" id="name" value="<?php echo $_POST['name']; ?>"></td>
 				<td><span id="var_name" style="color:red;"><?php echo $nameErr;?></span></td>
             </tr>
              <tr>
                 <td>Email:</td>
-                <td><input type="email" name="email" id="email"></td>
+                <td><input type="email" name="email" id="email" value="<?php echo $_POST['email']; ?>"></td>
 				<td><span id="var_email" style="color:red;"><?php echo $emailErr;?></span></td>
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><input type="password" name="password" id="password" minlength="6" maxlength="12"></td>
+                <td><input type="password" name="password" id="password" minlength="6" maxlength="12" value="<?php echo $_POST['password']; ?>"></td>
 				<td><span id="var_password" style="color:red;"><?php echo $passwordErr;?></span></td>
             </tr>
             <tr>
                 <td>ConfirmPassword:</td>
-                <td><input type="password" name="cpassword" id="cpassword"></td>
+                <td><input type="password" name="cpassword" id="cpassword" value="<?php echo $_POST['cpassword']; ?>"></td>
 				<td><span id="var_cpassword" style="color:red;"><?php echo $cpasswordErr;?></span></td>
             </tr>
             <tr>
                 <td>Gender:</td>
-                <td><input type="radio" name="gender" id="gender" value="Male">Male
-                    <input type="radio" name="gender" id="gender1" value="Female">Female</td>
+                <td><input type="radio" name="gender" id="gender" value="Male" <?php if ($_POST['gender'] == 'Male'){ echo $_POST['gender']='checked'; } ?>>Male
+                    <input type="radio" name="gender" id="gender1" value="Female" <?php if ($_POST['gender'] == 'Female'){ echo $_POST['gender']='checked'; } ?>>Female</td>
 				<td><span id="var_gender" style="color:red;"><?php echo $genderErr;?></span></td>	
             </tr>
             <tr style="height:15px;"></tr>

@@ -42,7 +42,21 @@
                     document.getElementById("var_date").innerHTML="";
                 }
                 
-                
+            if(document.getElementById("other_member").value != ""){
+                if(document.getElementById("other_amount").value == ""){
+                    document.getElementById("other").innerHTML="please enter amount";
+                    validate = false;
+                    }else{
+                        if(document.getElementById("other_item").value == ""){
+                            document.getElementById("other").innerHTML="please enter item";
+                            validate = false;
+                            }
+                    }
+                }else{
+                    document.getElementById("other").innerHTML="";
+                }
+
+
                 if(validate == false){
                     return(false);
                 }else{

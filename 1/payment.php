@@ -59,8 +59,8 @@
                     <tr>
 <!-- Name of member to find amount -->
                         <td>Member:</td>
-                        <td><select name="select_member" id="select_member" style="width:155px;">
-                                <option></option>
+                        <td><select name="select_member" id="select_member" style="width:155px;" value="<?php echo $_POST['select_member']; ?>">
+                                <option><span><?php echo $_POST['select_member']; ?></span></option>
                              <?php
                                 $edit = "SELECT costumer_user FROM costumer ";				
                                     
@@ -95,13 +95,13 @@
                         <tr>
 <!--insert date of payment-->
                             <td>Date:</td>
-                            <td><input type="date" name="date" id="date" style="width:168px;"></td>
+                            <td><input type="date" name="date" id="date" style="width:168px;" value="<?php echo $_POST['date']; ?>"></td>
                             <td><span id="var_date" class="error"></span></td>
                         </tr>
                         <tr>
 <!--insert member name of payment-->
                             <td>Member:</td>
-                            <td><select name="member" id="member" style="width:173px;">
+                            <td><select name="member" id="member" style="width:173px;" value="<?php echo $_POST['member']; ?>">
                                             <option></option>
                                 <?php   $edit = "SELECT costumer_user FROM costumer ";				
                                                 
@@ -115,7 +115,7 @@
                         <tr>
 <!--insert amount -->
                             <td>Amount paid:</td>
-                            <td><input type="text" name="mpaid" id="mpaid"></td>
+                            <td><input type="text" name="mpaid" id="mpaid" value="<?php echo $_POST['mpaid']; ?>"></td>
                             <td><span id="var_mpaid" class="error"></span></td>
                         </tr>    
                         <tr>
